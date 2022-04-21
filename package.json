@@ -1,0 +1,22 @@
+{
+  "name": "student-dashboard",
+  "version": "1.0.0",
+  "description": "Dashboard for TU Delft first year students of quarter 4 for better visualization of assignements, tutorials, exam registrations, etc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tetra-code/student-dashboard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tetra-code/student-dashboard/issues"
+  },
+  "homepage": "https://github.com/Tetra-code/student-dashboard#readme",
+  "dependencies": {
+    "node": "^17.7.2"
+  }
+}

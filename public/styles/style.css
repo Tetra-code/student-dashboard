@@ -135,27 +135,30 @@ main {
     height: 405px;
 }
 
-/* .card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-} */
+.card-body {
+    padding-top: 1rem;
+}
 
-thead {
+table {
+    width: "100%";
     display: block;
+    border-collapse: collapse;
+    margin-top: 5px;
+    height: 300px;
+    overflow: auto;
+}
+
+th {
     font-weight: bold;
 }
 
-tbody {
-    display: block;
-    overflow: auto;
-    margin-top: 5px;
-    height: 250px;
-    width: 100%;
-    border: solid 1px black;
+td {
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    font-size: 0.9rem;
 }
 
-td {
-    padding-top: 1rem;
-    font-size: 0.9rem;
+td, th {
+    border: solid 1px black;
+    width: 15%; 
 }

@@ -11,7 +11,19 @@ app.use(express.static(`${__dirname}/public`, {
 }));
 
 app.get('/', (req, res) => {
-    res.render("index");
+    res.render("home");
+})
+
+app.get('/calendar', (req, res) => {
+    res.render("calendar");
+})
+
+app.get('/timeline', (req, res) => {
+    res.render("timeline");
+})
+
+app.get('/settings', (req, res) => {
+    res.render("settings");
 })
 
 const server = http.createServer(app);

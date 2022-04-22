@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"/>
+    <title>Student Dashboard</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-brand">
+            <h2>Settings</h2>
+        </div>
+        <div class="sidebar-menu">
+            <ul>
+                <li>
+                    <a href="/">
+                        <span class="material-icons-sharp">home</span>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/calendar">
+                        <span class="material-icons-sharp">calendar_today</span>
+                        <span>Calendar</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/timeline">
+                        <span class="material-icons-sharp">timeline</span>
+                        <span>Timeline</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/settings" class="active">
+                        <span class="material-icons-sharp">settings</span>
+                        <span>Settings</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-content">
+        <header>
+            <h2>
+                <label>
+                    <span class="material-icons-sharp">menu</span>
+                </label>
+                Dashboard
+            </h2>
+        </header>
+        <main>
+            <div class="settings">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Edit</h3>
+                        <h3>General</h3>
+                        <h3>Theme</h3>
+                    </div>
+                    <div class="card-body">
+                        <div>Courses</div>
+                        <div>Grade</div>
+                        <div>Deadlines/Exams</div>
+                        <div>Events</div>
+                    </div>
+                    <button>Save changes
+                    </button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src='javascript/index.js'></script>
+</body>
+</html>

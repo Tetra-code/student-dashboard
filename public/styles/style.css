@@ -2,6 +2,8 @@
     --main-color: #008000;
     --color-dark: #1D2231;
     --text-grey: #8390A2;
+    --scrollbarBG: #CFD8DC;
+    --thumbBG: #90A4AE;
 }
 
 * {
@@ -12,6 +14,26 @@
     text-decoration: none;
     font-family:'Poppins', sans-serif;
 }
+
+/* 
+body::-webkit-scrollbar {
+    width: 11px;
+}
+
+body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG) ;
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG);
+} */
 
 .sidebar {
     width: 345px;
@@ -43,7 +65,11 @@
     padding-left: 1rem;
     display: block;
     color: #fff;
-    font-size: 1.2rem;
+}
+
+.sidebar-menu a span {
+    padding-right: 1rem;
+    font-size: 1.5rem;
 }
 
 .sidebar-menu a.active {
@@ -54,16 +80,10 @@
     border-radius: 30px 0px 0px 30px;
 }
 
-.sidebar-menu a span:first-child{
-    padding-right: 1rem;
-    font-size: 1.5rem;
-}
-
 
 .main-content {
     margin-left: 345px;
     overflow: hidden;
-
 }
 
 header {
@@ -117,8 +137,12 @@ main {
     border-radius: 10px;
 }
 
-.card-single span {
+.card-single div:first-child span{
     color: var(--text-grey)
+}
+
+.card-single span:last-child {
+    color: var(--main-color)
 }
 
 .grid {
@@ -130,10 +154,25 @@ main {
 
 .card {
     background: #fff;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 10px;
     height: 405px;
 }
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header button{
+    background: var(--main-color);
+    border-radius: 10px;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--main-color);
+}
+
 
 .card-body {
     padding-top: 1rem;
@@ -143,22 +182,24 @@ table {
     width: "100%";
     display: block;
     border-collapse: collapse;
-    margin-top: 5px;
     height: 300px;
     overflow: auto;
+    border: 2px solid #f0f0f0;
 }
+
 
 th {
     font-weight: bold;
+    border-bottom: 2px solid #f0f0f0;
 }
 
 td {
-    padding-top: 0.3rem;
-    padding-bottom: 0.3rem;
     font-size: 0.9rem;
+    color:#222;
 }
 
 td, th {
-    border: solid 1px black;
     width: 15%; 
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
 }

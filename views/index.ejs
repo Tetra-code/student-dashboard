@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"/>
     <title>Student dashboard</title>
 </head>
 <body>
@@ -16,19 +17,27 @@
             <ul>
                 <li>
                     <a href="" class="active">
-                    <span>Home</a>
+                        <span class="material-icons-sharp">home</span>
+                        <span>Home</span>
+                    </a>
                 </li>
                 <li>
                     <a href="">
-                    <span>Calendar</a>
+                        <span class="material-icons-sharp">calendar_today</span>
+                        <span>Calendar</span>
+                    </a>
                 </li>
                 <li>
                     <a href="">
-                    <span>Timeline</a>
+                        <span class="material-icons-sharp">timeline</span>
+                        <span>Timeline</span>
+                    </a>
                 </li>
                 <li>
                     <a href="">
-                    <span>Settings</a>
+                        <span class="material-icons-sharp">settings</span>
+                        <span>Settings</span>
+                    </a>
                 </li>
             </ul>
         </div>
@@ -37,6 +46,7 @@
         <header>
             <h2>
                 <label>
+                    <span class="material-icons-sharp">menu</span>
                 </label>
                 Dashboard
             </h2>
@@ -46,28 +56,37 @@
                 <div class="card-single">
                     <div>
                         <h1>4</h1>
-                        <span>Current courses</span>
+                        <span>Courses</span>
                     </div>
                     <div>
-                        Image
-                    </div>
-                </div>
-                <div class="card-single">
-                    <div>
-                        <h1>21</h1>
-                        <span>Grade</span>
-                    </div>
-                    <div>
-                        Image
+                        <span class="material-icons-sharp">library_books</span>
                     </div>
                 </div>
                 <div class="card-single">
                     <div>
-                        <h1>54</h1>
-                        <span>Upcoming events</span>
+                        <h1>8.3</h1>
+                        <span>Average Grade</span>
                     </div>
                     <div>
-                        Image
+                        <span class="material-icons-sharp">summarize</span>                            
+                    </div>
+                </div>
+                <div class="card-single">
+                    <div>
+                        <h2>Submit CO self-assessment</h2>
+                        <span>Upcoming Deadline</span>
+                    </div>
+                    <div>
+                        <span class="material-icons-sharp">task</span>
+                    </div>
+                </div>
+                <div class="card-single">
+                    <div>
+                        <h2>Kolsch concert</h2>
+                        <span>Upcoming Event</span>
+                    </div>
+                    <div>
+                        <span class="material-icons-sharp">event_seat</span>
                     </div>
                 </div>
             </div>
@@ -76,6 +95,9 @@
                     <div class="card">
                         <div class="card-header">
                             <h3>Deadlines/Exams</h3>
+                            <button>See all
+                                <span class="material-icons-sharp">arrow_right_alt</span>
+                            </button>
                         </div>
                         <div class="card-body">
                             <table class="deadlines">
@@ -183,7 +205,11 @@
                     <div class="card">
                         <div class="card-header">
                             <h3>Events</h3>
+                            <button>See all
+                                <span class="material-icons-sharp">arrow_right_alt</span>
+                            </button>
                         </div>
+                        
                         <div class="card-body">
                             <table class="events" width="100%">
                                 <tr>

@@ -148,7 +148,7 @@ main {
 
 .card-single span {
     color: var(--main-color);
-    margin-right: 0;
+    /* margin-left: 0; */
 }
 
 .grid {
@@ -197,9 +197,14 @@ main {
     display: block;
 }
   
-.dropdown:hover .dropdown-content {display: block;}
-  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 
+.dropdown-content a:hover {
+    background-color: lightblue;
+}
+  
 .card-header button{
     background: var(--main-color);
     margin-left: auto;
@@ -208,7 +213,6 @@ main {
     padding: 0.5rem 1rem;
     border: 1px solid var(--main-color);
 }
-
 
 .card-body {
     padding-top: 1rem;
@@ -222,7 +226,6 @@ table {
     overflow: auto;
     border: 2px solid #f0f0f0;
 }
-
 
 th {
     font-weight: bold;

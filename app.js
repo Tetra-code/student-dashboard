@@ -11,6 +11,10 @@ app.use(express.static(`${__dirname}/public`, {
 }));
 
 app.get('/', (req, res) => {
+    res.render("splash");
+})
+
+app.get('/home', (req, res) => {
     res.render("home");
 })
 
@@ -26,6 +30,16 @@ app.get('/settings', (req, res) => {
     res.render("settings");
 })
 
+const users ={};
+//guid function for clientId
+const guid = function() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+        var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
+        return v.toString(16);
+    });
+}
+
+
 const server = http.createServer(app);
 const wss = new ws.Server({ server });
 
@@ -39,6 +53,7 @@ wss.on("connection", (con) => {
     con.on("close", () => {
     })
 });
+
 
 server.listen(port, ()=>{
     console.log(`Server conected to port ${port}`);

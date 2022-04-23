@@ -4,7 +4,7 @@
   "description": "Dashboard for TU Delft first year students of quarter 4 for better visualization of assignements, tutorials, exam registrations, etc",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "devStart": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,12 @@
   },
   "homepage": "https://github.com/Tetra-code/student-dashboard#readme",
   "dependencies": {
+    "ejs": "^3.1.7",
+    "express": "^4.17.3",
     "node": "^17.7.2"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "nodemon": "^2.0.15"
   }
 }

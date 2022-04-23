@@ -1,7 +1,7 @@
 if (process.env.NODE_ENV !== 'production') {
     require('dotenv').config();
 }
-
+const dashboard_data = require('./dashboard_data');
 const express = require('express');
 const ws = require("ws");
 const app = express();
@@ -14,6 +14,8 @@ const http = require('http');
 const port = process.env.PORT || 3000;
 
 const users =[];
+
+const dashboard=[];
 
 const initializePassport = require('./passport-config');
 initializePassport(passport, 
@@ -56,6 +58,8 @@ app.get('/register', checkNotAuthenticated, (req, res) => {
 })
 
 app.post('/register', checkNotAuthenticated, async (req, res) => {
+    // if (req.body.email )
+    // users.find(user => user.email === email),
     try {
         const hashedPassword = await bcrypt.hash(req.body.password, 10);
         users.push({
@@ -64,6 +68,8 @@ app.post('/register', checkNotAuthenticated, async (req, res) => {
             email: req.body.email,
             password: hashedPassword
         })
+        dashboard[req.body.email] = new dashboard_data();
+        console.log(dashboard)
         res.redirect('/login');
     } catch {
         res.redirect('/register')
@@ -75,8 +81,9 @@ app.delete('/logout', (req, res) => {
     res.redirect('/login');
 });
 
-app.get('/home', checkAuthenticated, (req, res) => {
-    res.render("home", {name: req.user.username});
+app.get('/home', (req, res) => {
+    res.render("home");
+    // res.render("home", {name: req.user.username});
 });
 
 app.get('/calendar', checkAuthenticated, (req, res) => {
@@ -95,10 +102,9 @@ const server = http.createServer(app);
 const wss = new ws.Server({ server });
 
 wss.on("connection", (con) => {
-
     con.on("message", async (request) => {
-      const city = JSON.parse(request)
-      con.send(JSON.stringify(waterData[city]));
+      const payload = JSON.parse(request)
+      
     });
   
     con.on("close", () => {

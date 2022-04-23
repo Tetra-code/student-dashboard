@@ -1,0 +1,75 @@
+:root {
+    --main-color: #2980b9;
+    --secondary-color: #8e44ad;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family:'Poppins', sans-serif;
+}
+
+.main {
+    height: 100vh;
+    background: linear-gradient(120deg, var(--main-color), var(--secondary-color));
+    box-sizing: border-box;
+}
+
+.center {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+}
+
+.center h1 {
+    text-align: center;
+    font-size: 100px;
+    color: white;
+}
+
+.center .description {
+    font-size: 20px;
+    font-style: italic;
+    color: white;
+}
+
+.demo {
+    display: block;
+    height: 90vh;
+    background: white;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.demo-description {
+    margin-top: 80px;
+    margin-bottom: 40px;
+    font-size: 40px;
+    font-style: italic;
+    color: var(--main-color)
+}
+
+.screenshot img{
+    width: 1100px;
+}
+
+button {
+    margin-top: 20px;
+    background: var(--main-color);
+    border-radius: 20px;
+    padding: 1rem 2rem;
+    border: 1px solid var(--main-color);
+    font-size: 20px;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover {
+    border-color: var(--main-color);
+    transition: 0.5s;
+}

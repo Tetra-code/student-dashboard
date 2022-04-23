@@ -39,7 +39,7 @@ app.use(
     methodOverride('_method')
 )
 
-app.get('/', checkNotAuthenticated, (req, res) => {
+app.get('/', (req, res) => {
     res.render("splash");
 })
 
@@ -69,7 +69,6 @@ app.post('/register', checkNotAuthenticated, async (req, res) => {
             password: hashedPassword
         })
         dashboard[req.body.email] = new dashboard_data();
-        console.log(dashboard)
         res.redirect('/login');
     } catch {
         res.redirect('/register')
@@ -81,7 +80,7 @@ app.delete('/logout', (req, res) => {
     res.redirect('/login');
 });
 
-app.get('/home', (req, res) => {
+app.get('/home', checkAuthenticated, (req, res) => {
     res.render("home");
     // res.render("home", {name: req.user.username});
 });

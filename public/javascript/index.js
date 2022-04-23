@@ -27,32 +27,32 @@ socket.onmessage = (message) =>{
     }
 }
 
-course_edit.onclick = function() {
-    editor.style.display = "block";
-}
+// course_edit.onclick = function() {
+//     editor.style.display = "block";
+// }
 
-grade_edit.onclick = function() {
-    editor.style.display = "block";
-}
+// grade_edit.onclick = function() {
+//     editor.style.display = "block";
+// }
 
-close.onclick = function() {
-    editor.style.display = "none";
-}
+// close.onclick = function() {
+//     editor.style.display = "none";
+// }
 
-window.onclick = function(event) {
-  if (event.target == editor) {
-    editor.style.display = "none";
-  }
-}
+// window.onclick = function(event) {
+//   if (event.target == editor) {
+//     editor.style.display = "none";
+//   }
+// }
 
-deadline_add.onclick = function() {
-    editor.style.display = "block";
-}
+// deadline_add.onclick = function() {
+//     editor.style.display = "block";
+// }
 
-deadline_edit.onclick = function() {
-    editor.style.display = "block";
-    //pass along attributes
-}
+// deadline_edit.onclick = function() {
+//     editor.style.display = "block";
+//     //pass along attributes
+// }
 
 
 

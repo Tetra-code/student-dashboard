@@ -4,6 +4,7 @@
   "description": "Dashboard for TU Delft first year students of quarter 4 for better visualization of assignements, tutorials, exam registrations, etc",
   "main": "index.js",
   "scripts": {
+    "start": "node app.js",
     "devStart": "nodemon app.js"
   },
   "repository": {
@@ -17,9 +18,15 @@
   },
   "homepage": "https://github.com/Tetra-code/student-dashboard#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "ejs": "^3.1.7",
     "express": "^4.17.3",
-    "node": "^17.7.2"
+    "express-flash": "^0.0.2",
+    "express-session": "^1.17.2",
+    "method-override": "^3.0.0",
+    "node": "^17.7.2",
+    "passport": "^0.5.2",
+    "passport-local": "^1.0.0"
   },
   "devDependencies": {
     "dotenv": "^16.0.0",

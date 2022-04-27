@@ -40,7 +40,7 @@ app.use(
 )
 
 app.get('/', (req, res) => {
-    res.render("splash");
+    res.render("home");
 })
 
 app.get('/login', checkNotAuthenticated, (req, res) => {
@@ -48,7 +48,7 @@ app.get('/login', checkNotAuthenticated, (req, res) => {
 })
 
 app.post('/login', checkNotAuthenticated, passport.authenticate('local', {
-    successRedirect: '/home',
+    successRedirect: '/dashboard',
     failureRedirect: '/login',
     failureFlash: true
 }))
@@ -80,8 +80,8 @@ app.delete('/logout', (req, res) => {
     res.redirect('/login');
 });
 
-app.get('/home', checkAuthenticated, (req, res) => {
-    res.render("home");
+app.get('/dashboard', checkAuthenticated, (req, res) => {
+    res.render("dashboard");
     // res.render("home", {name: req.user.username});
 });
 

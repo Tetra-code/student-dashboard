@@ -58,8 +58,6 @@ app.get('/register', checkNotAuthenticated, (req, res) => {
 })
 
 app.post('/register', checkNotAuthenticated, async (req, res) => {
-    // if (req.body.email )
-    // users.find(user => user.email === email),
     try {
         const hashedPassword = await bcrypt.hash(req.body.password, 10);
         users.push({
@@ -80,7 +78,7 @@ app.delete('/logout', (req, res) => {
     res.redirect('/login');
 });
 
-app.get('/dashboard', checkAuthenticated, (req, res) => {
+app.get('/dashboard', (req, res) => {
     res.render("dashboard");
     // res.render("home", {name: req.user.username});
 });

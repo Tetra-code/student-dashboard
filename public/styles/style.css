@@ -4,12 +4,11 @@
 }
 
 /* overflow:hidden */
-
 :root {
     --color-main: #2980b9;
     --color-secondary: #8e44ad;
-    --color-accent: #131c22;
-    --color-light: #fdfdfd;
+    --color-dark: #131c22;
+    --color-light: #ffffff;
     --color-grey: #f2f2f2;
 
     --ff-primary: 'Poppins', sans-serif;
@@ -97,11 +96,29 @@ section {
     transition: 0.5s;
 }
 
+/* disclaimer */
+.disclaimer {
+    height: 20em;
+    color: var(--color-dark);
+    background: var(--color-grey);
+    text-align: center;
+}
+
+.disclaimer h2 {
+    margin-top: 0;
+}
+
+.disclaimer_center {
+    padding: 3em 1em;
+    margin: 0 auto;
+    width: 700px;
+}
+
+
 /* encouragement */ 
 .encouragement {
-    margin: 10em 0 0;
     height: 20em;
-    background-color: var(--color-accent);
+    background-color: var(--color-dark);
     color: white;
     text-align: center;
 }
@@ -119,7 +136,7 @@ section {
 /* demo */
 .demo {
     text-align: center;
-    background: var(--color-grey);
+    background: var(--color-light);
 }
 
 .demo h2{

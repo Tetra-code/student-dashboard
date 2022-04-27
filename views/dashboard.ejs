@@ -111,117 +111,60 @@
                 <div class="deadlines">
                     <div class="card">
                         <div class="card-header">
-                            <h3>Deadlines/Exams</h3>
-                            <div class="dropdown">
-                                <span class="material-icons-sharp">more_vert</span>
-                                <div class="dropdown-content">
-                                    <div id="deadline-add">Add</div>
-                                    <div id="deadline-edit">Edit</div>
-                                    <div id="deadline-delete">Delete</div>
-                                </div>
-                            </div>
+                            <h3>Deadlines</h3>
                             <button>See all
                             </button>
                         </div>
                         <div class="card-body">
-                            <table class="deadlines">
+                            <table class="deadlines_table" id="deadline_table">
                                 <tr>
                                     <th>Type</th>
                                     <th>Title</th>
                                     <th>Status</th>
-                                    <th>Days remaining</th>
+                                    <th>D-Days</th>
+                                    <th>Options</th>
+                                </tr>
+                                <tr id="row1">
+                                    <td id="type_row1">Paper</td>
+                                    <td id="title_row1">CO-Assignment</td>
+                                    <td id="status_row1">Important</td>
+                                    <td id="days_row1">15</td>
+                                    <td>
+                                        <input type="button" id="edit_button1" value="Edit" class="edit" onclick="edit_row('1')">
+                                        <input type="button" id="save_button1" value="Save" class="save" onclick="save_row('1')">
+                                        <input type="button" id="delete_button1" value="Delete" class="delete" onclick="delete_row('1')">
+                                    </td>
+                                </tr>
+                                <tr id="row2">
+                                    <td id="type_row2">Paper</td>
+                                    <td id="title_row2">CO-Assignment</td>
+                                    <td id="status_row2">Important</td>
+                                    <td id="days_row2">15</td>
+                                    <td>
+                                        <input type="button" id="edit_button2" value="Edit" class="edit" onclick="edit_row('2')">
+                                        <input type="button" id="save_button2" value="Save" class="save" onclick="save_row('2')">
+                                        <input type="button" id="delete_button2" value="Delete" class="delete" onclick="delete_row('2')">
+                                    </td>
+                                </tr>
+                                <tr id="row3">
+                                    <td id="type_row3">Paper</td>
+                                    <td id="title_row3">CO-Assignment</td>
+                                    <td id="status_row3">Important</td>
+                                    <td id="days_row3">15</td>
+                                    <td>
+                                        <input type="button" id="edit_button3" value="Edit" class="edit" onclick="edit_row('3')">
+                                        <input type="button" id="save_button3" value="Save" class="save" onclick="save_row('3')">
+                                        <input type="button" id="delete_button3" value="Delete" class="delete" onclick="delete_row('3')">
+                                    </td>
                                 </tr>
                                 <tr>
-                                    <td>Typdsf1</td>
-                                    <td>Tidsdtl1</td>
-                                    <td>Stadddtus1</td>
-                                    <td>Ds1</td>
-                                </tr>
-                                <tr>
-                                    <td>Typdse2</td>
-                                    <td>Titassdsl2</td>
-                                    <td>Stdsdfadstdddddddddddddddddddddddddus2</td>
-                                    <td>Dayssssssssssssssssssssssssssss2</td>
-                                </tr>
-                                <tr>
-                                    <td>Type3</td>
-                                    <td>Titl3</td>
-                                    <td>Stassssstus3</td>
-                                    <td>Days3</td>
-                                </tr>
-                                <tr>
-                                    <td>Type1</td>
-                                    <td>Titl1</td>
-                                    <td>Status1</td>
-                                    <td>Days1</td>
-                                </tr>
-                                <tr>
-                                    <td>Type2</td>
-                                    <td>Titl2</td>
-                                    <td>Status2</td>
-                                    <td>Days2</td>
-                                </tr>
-                                <tr>
-                                    <td>Type3</td>
-                                    <td>Titl3</td>
-                                    <td>Status3</td>
-                                    <td>Days3</td>
-                                </tr>
-                                <tr>
-                                    <td>Type1</td>
-                                    <td>Titl1</td>
-                                    <td>Status1</td>
-                                    <td>Days1</td>
-                                </tr>
-                                <tr>
-                                    <td>Type2</td>
-                                    <td>Titl2</td>
-                                    <td>Status2</td>
-                                    <td>Days2</td>
-                                </tr>
-                                <tr>
-                                    <td>Type3</td>
-                                    <td>Titl3</td>
-                                    <td>Status3</td>
-                                    <td>Days3</td>
-                                </tr>
-                                <tr>
-                                    <td>Type1</td>
-                                    <td>Titl1</td>
-                                    <td>Status1</td>
-                                    <td>Days1</td>
-                                </tr>
-                                <tr>
-                                    <td>Type2</td>
-                                    <td>Titl2</td>
-                                    <td>Status2</td>
-                                    <td>Days2</td>
-                                </tr>
-                                <tr>
-                                    <td>Type3</td>
-                                    <td>Titl3</td>
-                                    <td>Status3</td>
-                                    <td>Days3</td>
-                                </tr>
-                                <tr>
-                                    <td>Type1</td>
-                                    <td>Titl1</td>
-                                    <td>Status1</td>
-                                    <td>Days1</td>
-                                </tr>
-                                <tr>
-                                    <td>Type2</td>
-                                    <td>Titl2</td>
-                                    <td>Status2</td>
-                                    <td>Days2</td>
-                                </tr>
-                                <tr>
-                                    <td>Type3</td>
-                                    <td>Titl3</td>
-                                    <td>Status3</td>
-                                    <td>Days3</td>
+                                    <td><input type="text" id="new_type"></td>
+                                    <td><input type="text" id="new_title"></td>
+                                    <td><input type="text" id="new_status"></td>
+                                    <td><input type="text" id="new_days"></td>
                                 </tr>
                             </table>
+                            <button class="add_row" onclick="add_row()">add new row</button>
                         </div>
                     </div>
                 </div>
@@ -241,7 +184,7 @@
                             </button>
                         </div>
                         <div class="card-body">
-                            <table class="events" width="100%">
+                            <table class="events_table" width="100%">
                                 <tr>
                                     <th>Name</th>
                                     <th>Date</th>
@@ -267,14 +210,24 @@
                     </div>
                 </div>
             </div>
-            <!-- <div id="editor" class="editor">
-                <div class="editor-content">
-                  <span class="close">&times;</span>
-                  <p>Some text in the Modal..</p>
-                </div>
-            </div> -->
         </main>
     </div>
     <script src='javascript/index.js'></script>
+    <script>
+
+        function edit(event) {
+            console.log("Clicked edit");
+            console.log(event.target.parentElement.parentElement);
+        };
+
+        function remove() {
+            console.log("Clicked delete");
+        }
+
+        function addNewRow() {
+
+        }
+
+    </script>
 </body>
 </html>

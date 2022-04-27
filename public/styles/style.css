@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* overflow:hidden */
+
+:root {
+    --color-main: #2980b9;
+    --color-secondary: #8e44ad;
+    --color-accent: #131c22;
+    --color-light: #fdfdfd;
+    --color-grey: #f2f2f2;
+
+    --ff-primary: 'Poppins', sans-serif;
+    --ff-secondary: 'Helvetica', sans-serif;
+    --fw-reg: 300;
+    --fw-bold: 700;
+
+    --fs-h1: 6rem;
+    --fs-h2: 3rem;
+    --fs-h3: 2rem;
+    --fs-body: 1.25rem;
+}
+
+@media (max-width: 800px) {
+    :root {
+        --fs-h1: 4rem;
+        --fs-h2: 2rem;
+        --fs-h3: 2rem;
+        --fs-body: 1rem;
+    }
+}
+
+/* General */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.5;
+}
+
+button {
+    border-radius: 30px;
+    background: var(--color-main);
+    padding: 0.8em;
+    border: 1px solid var(--color-main);
+    font-size: 20px;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+    outline: none;
+}
+
+h1 {font-size: var(--fs-h1);}
+
+h2 {font-size: var(--fs-h2);}
+
+h3 {font-size: var(--fs-h3);}
+
+section {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/* main */
+.main {
+    height: 850px;
+    padding-top: 8rem;
+    background: linear-gradient(120deg, var(--color-main), var(--color-secondary));
+    align-items: center;
+}
+
+.main_center {
+    position: absolute;
+    left: 50%;
+    top: 25rem;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    color: white;
+}
+
+.main_center .description {
+    font-style: italic;
+}
+
+.main_center button {
+    margin-top: 3rem;
+    background: transparent;
+}
+
+.main_center button:hover {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    transition: 0.5s;
+}
+
+/* encouragement */ 
+.encouragement {
+    margin: 10em 0 0;
+    height: 20em;
+    background-color: var(--color-accent);
+    color: white;
+    text-align: center;
+}
+
+.encouragement_center {
+    padding: 3em 1em;
+    margin: 0 auto;
+    width: 700px;
+}
+
+.encouragement_description {
+    padding-top: 2em;
+}
+
+/* demo */
+.demo {
+    text-align: center;
+    background: var(--color-grey);
+}
+
+.demo h2{
+    margin-top: 0;
+    padding: 5rem;
+}
+
+.demo .row {
+    display: flex;
+    column-gap: 5rem;
+    margin: 3rem 3rem 10rem;
+    text-align: left;
+}
+
+.demo img {
+    width: 600px;
+}
+
+
+.demo button {
+    border: 2px solid white;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+}
+
+.demo button:hover {
+    border-color: var(--color-main);
+    transition: 0.5s;
+}

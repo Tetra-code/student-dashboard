@@ -68,8 +68,6 @@ function add_row() {
 }
 
 
-
-
 socket.onmessage = (message) =>{
     
 }

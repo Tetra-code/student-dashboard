@@ -58,10 +58,6 @@ h2 {font-size: var(--fs-h2);}
 
 h3 {font-size: var(--fs-h3);}
 
-section {
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
 
 /* main */
 .main {
@@ -79,6 +75,7 @@ section {
     transform: translate(-50%, -50%);
     width: 1000px;
     color: white;
+    padding: 0 2rem 0;
 }
 
 .main_center .description {
@@ -88,12 +85,12 @@ section {
 .main_center button {
     margin-top: 3rem;
     background: transparent;
+    transition: 0.5s;
 }
 
 .main_center button:hover {
     margin-top: 1rem;
     margin-bottom: 2rem;
-    transition: 0.5s;
 }
 
 /* disclaimer */
@@ -109,7 +106,7 @@ section {
 }
 
 .disclaimer_center {
-    padding: 3em 1em;
+    padding: 3rem 2rem 3rem;
     margin: 0 auto;
     width: 700px;
 }
@@ -117,20 +114,29 @@ section {
 
 /* encouragement */ 
 .encouragement {
-    height: 20em;
-    background-color: var(--color-dark);
+    height: 30em;
+    background: url('/images/student.png');
     color: white;
     text-align: center;
+    padding: 0;
 }
 
 .encouragement_center {
-    padding: 3em 1em;
+    background: var(--color-dark);
+    z-index: 1;
+    opacity: 0.9;
+    padding: 3rem 2rem 3rem;
     margin: 0 auto;
-    width: 700px;
+    height: 100%;
+    width: 100%;
+}
+
+.encouragement_center h2, .encouragement_center p {
+    z-index: 2;
 }
 
 .encouragement_description {
-    padding-top: 2em;
+    padding-top: 2rem;
 }
 
 /* demo */
@@ -140,14 +146,13 @@ section {
 }
 
 .demo h2{
-    margin-top: 0;
-    padding: 5rem;
+    margin-top: 5rem;
 }
 
 .demo .row {
     display: flex;
     column-gap: 5rem;
-    margin: 3rem 3rem 10rem;
+    padding: 3rem 10rem 3rem;
     text-align: left;
 }
 
@@ -155,15 +160,14 @@ section {
     width: 600px;
 }
 
-
 .demo button {
     border: 2px solid white;
     padding: 1rem 2rem;
     border-radius: 20px;
     margin-bottom: 2rem;
+    transition: 0.5s;
 }
 
 .demo button:hover {
     border-color: var(--color-main);
-    transition: 0.5s;
 }
